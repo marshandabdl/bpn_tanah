@@ -2,8 +2,8 @@
 <html lang="id">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SIPATAN - Sistem Pendukung Keputusan Tanah</title>
-
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <style>
         body {
@@ -127,6 +127,35 @@
             text-align:center;
             margin-top:60px;
         }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 90px 0 50px 0;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero h3 {
+                font-size: 16px;
+            }
+
+            .hero img {
+                max-width: 200px;
+                margin-top: 25px;
+            }
+
+            .section {
+                padding: 50px 0;
+            }
+
+            .btn-start {
+                width: 100%;
+            }
+        }
         </style>
     </head>
 
@@ -150,7 +179,6 @@
                             <a class="nav-link" href="#jenis">Jenis Hak</a>
                         </li>
                     </ul>
-
                     <a href="/form" class="btn-konsultasi">
                         Mulai Konsultasi
                     </a>
@@ -161,16 +189,15 @@
         <section class="hero">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-6">
+                    <div class="col-12 col-md-6">
                         <h1>SIPATAN</h1>
                         <h3>Sistem Pendukung Keputusan Penentuan Hak Atas Tanah</h3>
                         <p>Sistem berbasis web yang membantu masyarakat menentukan jenis hak atas tanah menggunakan metode AHP secara cepat dan mudah.</p>
-
                         <a href="/form">
                             <button class="btn-start">Mulai Konsultasi</button>
                         </a>
                     </div>
-                    <div class="col-md-6 text-center">
+                    <div class="col-12 col-md-6 text-center">
                         <img src="{{ asset('images/sipatan.png') }}" alt="Logo SIPATAN">
                     </div>
                 </div>
@@ -181,11 +208,11 @@
             <div class="container">
                 <h2 class="section-title">Tentang Sistem</h2>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-12 col-md-6 mb-3">
                         <h5>Deskripsi</h5>
                         <p>SIPATAN merupakan sistem berbasis web yang membantu pemohon menentukan jenis hak atas tanah yang sesuai dengan kondisi tanah dan tujuan penggunaannya.</p>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-12 col-md-6 mb-3">
                         <h5>Metode</h5>
                         <p>Sistem menggunakan metode Analytical Hierarchy Process (AHP) untuk menghitung bobot setiap kriteria sehingga dapat memberikan rekomendasi yang paling sesuai.</p>
                     </div>
@@ -197,25 +224,25 @@
             <div class="container">
                 <h2 class="section-title">Cara Penggunaan</h2>
                 <div class="row g-4">
-                    <div class="col-md-3">
+                    <div class="col-6 col-md-3">
                         <div class="step-box">
                             <h5>1. Mulai Konsultasi</h5>
                             <p>Klik tombol mulai konsultasi untuk memulai proses rekomendasi.</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-6 col-md-3">
                         <div class="step-box">
                             <h5>2. Isi Data</h5>
                             <p>Masukkan informasi seperti subjek, luas tanah, lokasi, status dan jangka waktu.</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-6 col-md-3">
                         <div class="step-box">
                             <h5>3. Proses AHP</h5>
                             <p>Sistem akan menghitung bobot menggunakan metode AHP.</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-6 col-md-3">
                         <div class="step-box">
                             <h5>4. Hasil</h5>
                             <p>Sistem menampilkan rekomendasi hak atas tanah yang paling sesuai.</p>
@@ -229,26 +256,25 @@
             <div class="container">
                 <h2 class="section-title">Jenis Hak Atas Tanah</h2>
                 <div class="row g-4">
-                    <div class="col-md-3">
+                    <div class="col-6 col-md-3">
                         <div class="card-hak">
                             <h5>Hak Milik</h5>
                             <p>Hak turun-temurun, terkuat dan terpenuh yang dapat dimiliki oleh warga negara.</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-6 col-md-3">
                         <div class="card-hak">
                             <h5>Hak Guna Bangunan</h5>
                             <p>Hak untuk mendirikan dan memiliki bangunan di atas tanah yang bukan miliknya.</p>
                         </div>
                     </div>
-
-                    <div class="col-md-3">
+                    <div class="col-6 col-md-3">
                         <div class="card-hak">
                             <h5>Hak Guna Usaha</h5>
                             <p>Hak untuk mengusahakan tanah untuk kegiatan pertanian atau perkebunan.</p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-6 col-md-3">
                         <div class="card-hak">
                             <h5>Hak Pakai</h5>
                             <p>Hak untuk menggunakan tanah milik negara atau pihak lain.</p>
@@ -256,7 +282,6 @@
                     </div>
                 </div>
 
-                <br>
                 <div class="alert alert-warning mt-4">
                     <strong>Disclaimer:</strong><br>
                     Website ini tidak terintegrasi langsung dengan sistem resmi Kementerian ATR/BPN.
