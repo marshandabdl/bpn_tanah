@@ -4,7 +4,7 @@ cmds = [
     "php artisan config:clear",
     "php artisan cache:clear",
     "php artisan key:generate --force",
-    "php artisan migrate --force",
+    "php artisan migrate:fresh --force",
     "php artisan db:seed --class=AHPSeeder --force",
     "php artisan config:cache",
     "php artisan route:cache"
