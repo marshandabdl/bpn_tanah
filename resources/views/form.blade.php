@@ -82,7 +82,7 @@
 </div>
 
 
-        <form method="POST" action="{{ url('/hitung') }}">
+        <form method="POST" action="{{secure_url('/hitung') }}">
             @csrf
 
             @if(isset($kriterias) && count($kriterias) > 0)
