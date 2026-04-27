@@ -16,6 +16,10 @@ class AHPSeeder extends Seeder
      */
     public function run(): void
     {
+        if (Alternatif::count()>0) {
+            return;
+        }
+
         $hm = Alternatif::create(['kode'=>'HM','nama'=>'Hak Milik']);
         $hgb = Alternatif::create(['kode'=>'HGB','nama'=>'Hak Guna Bangunan']);
         $hgu = Alternatif::create(['kode'=>'HGU','nama'=>'Hak Guna Usaha']);
