@@ -97,7 +97,7 @@
                                 {{-- ICON BERDASARKAN NAMA KRITERIA --}}
                                 @if($kriteria->nama == "Subjek")
                                     <i class="bi bi-person icon-style"></i>
-                                @elseif($kriteria->nama == "Peruntukkan")
+                                @elseif($kriteria->nama == "Peruntukan")
                                     <i class="bi bi-geo-alt icon-style"></i>
                                 @elseif($kriteria->nama == "Luas Tanah")
                                     <i class="bi bi-aspect-ratio icon-style"></i>
