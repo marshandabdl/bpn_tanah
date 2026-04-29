@@ -27,7 +27,7 @@ class AHPSeeder extends Seeder
 
         $subjek = Kriteria::create(['nama'=>'Subjek','bobot_global'=>0.365]);
         $luas = Kriteria::create(['nama'=>'Luas Tanah','bobot_global'=>0.162]);
-        $peruntukan = Kriteria::create(['nama'=>'Peruntukkan','bobot_global'=>0.131]);
+        $peruntukan = Kriteria::create(['nama'=>'Peruntukan','bobot_global'=>0.131]);
         $lokasi = Kriteria::create(['nama'=>'Lokasi','bobot_global'=>0.069]);
         $status = Kriteria::create(['nama'=>'Status Tanah','bobot_global'=>0.223]);
         $jangka = Kriteria::create(['nama'=>'Jangka Waktu','bobot_global'=>0.051]);
