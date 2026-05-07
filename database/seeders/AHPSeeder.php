@@ -69,7 +69,7 @@ class AHPSeeder extends Seeder
                      "HGB" => 0.263,
                      "HGU" => 0.057,
                      "HP" => 0.122,
-                    };
+                     };
                 }
 
                 if ($sub->nama == "WNA") {
@@ -78,7 +78,7 @@ class AHPSeeder extends Seeder
                      "HGB" => 0.097,
                      "HGU" => 0.194,
                      "HP" => 0.643,
-                    };
+                     };
                 }
 
                 if ($sub->nama == "Badan Hukum") {
