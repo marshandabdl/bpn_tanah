@@ -52,8 +52,6 @@ class SpkController extends Controller
             }
         }
 
-        // ================= HARD CONSTRAINT =================
-
         if ($input['Subjek']->nama == "WNA" &&
             $alternatif->kode != "HP") {
 
@@ -102,9 +100,6 @@ class SpkController extends Controller
         $hasil[$alternatif->kode] = $total;
     }
 
-    // ================= NORMALISASI PERSENTASE =================
-
-    // Buang nilai negatif
     $hasilValid = array_filter($hasil, function($v) {
         return $v > 0;
     });
