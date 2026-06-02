@@ -18,6 +18,7 @@ class SpkController extends Controller
 
     public function hitung(Request $request)
 {
+    dd('Masuk Hitung');
     $alternatifs = Alternatif::all();
     $kriterias   = Kriteria::with('subKriterias')->get();
 
@@ -100,6 +101,7 @@ class SpkController extends Controller
         $hasil[$alternatif->kode] = $total;
     }
 
+    dd($hasil);
     $hasilValid = array_filter($hasil, function($v) {
         return $v > 0;
     });
@@ -116,6 +118,15 @@ class SpkController extends Controller
     }
 
     arsort($persentase);
+    if (empty($persentase)) {
+        return view('hasil', [
+            'hasil' => $hasil,
+            'persentase' => [],
+            'rekomendasi' => 'Tidak ada hak yang memenuhi kriteria',
+            'alasan' => $alasan,
+            'input' => $input
+        ]);
+    }
 
     $nilaiTertinggi = max($persentase);
 

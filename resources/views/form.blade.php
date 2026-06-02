@@ -82,7 +82,7 @@
 </div>
 
 
-        <form method="POST" action="{{secure_url('/hitung') }}">
+        <form method="POST" action="{{url('/hitung') }}">
             @csrf
 
             @if(isset($kriterias) && count($kriterias) > 0)
@@ -94,7 +94,6 @@
                         <div class="col-md-6 mb-4">
                             <label class="form-label fw-semibold">
 
-                                {{-- ICON BERDASARKAN NAMA KRITERIA --}}
                                 @if($kriteria->nama == "Subjek")
                                     <i class="bi bi-person icon-style"></i>
                                 @elseif($kriteria->nama == "Peruntukan")
