@@ -25,36 +25,36 @@ class AHPSeeder extends Seeder
         $hgu = Alternatif::create(['kode'=>'HGU','nama'=>'Hak Guna Usaha']);
         $hp = Alternatif::create(['kode'=>'HP','nama'=>'Hak Pakai']);
 
-        $subjek = Kriteria::create(['nama'=>'Subjek','bobot_global'=>0.365]);
-        $luas = Kriteria::create(['nama'=>'Luas Tanah','bobot_global'=>0.162]);
-        $peruntukan = Kriteria::create(['nama'=>'Peruntukan','bobot_global'=>0.131]);
-        $lokasi = Kriteria::create(['nama'=>'Lokasi','bobot_global'=>0.069]);
-        $status = Kriteria::create(['nama'=>'Status Tanah','bobot_global'=>0.223]);
-        $jangka = Kriteria::create(['nama'=>'Jangka Waktu','bobot_global'=>0.051]);
+        $subjek = Kriteria::create(['nama'=>'Subjek','bobot_global'=>0.376]);
+        $luas = Kriteria::create(['nama'=>'Luas Tanah','bobot_global'=>0.158]);
+        $peruntukan = Kriteria::create(['nama'=>'Peruntukan','bobot_global'=>0.246]);
+        $lokasi = Kriteria::create(['nama'=>'Lokasi','bobot_global'=>0.072]);
+        $status = Kriteria::create(['nama'=>'Status Tanah','bobot_global'=>0.108]);
+        $jangka = Kriteria::create(['nama'=>'Jangka Waktu','bobot_global'=>0.040]);
 
-        SubKriteria::create(['kriteria_id'=>$subjek->id,'nama'=>'WNI','bobot_lokal'=>0.663]);
-        SubKriteria::create(['kriteria_id'=>$subjek->id,'nama'=>'WNA','bobot_lokal'=>0.106]);
-        SubKriteria::create(['kriteria_id'=>$subjek->id,'nama'=>'Badan Hukum','bobot_lokal'=>0.260]);
+        SubKriteria::create(['kriteria_id'=>$subjek->id,'nama'=>'WNI','bobot_lokal'=>0.581]);
+        SubKriteria::create(['kriteria_id'=>$subjek->id,'nama'=>'WNA','bobot_lokal'=>0.110]);
+        SubKriteria::create(['kriteria_id'=>$subjek->id,'nama'=>'Badan Hukum','bobot_lokal'=>0.309]);
 
-        SubKriteria::create(['kriteria_id'=>$luas->id,'nama'=>'< 600m²','bobot_lokal'=>0.633]);
-        SubKriteria::create(['kriteria_id'=>$luas->id,'nama'=>'600 - 2000m²','bobot_lokal'=>0.260]);
-        SubKriteria::create(['kriteria_id'=>$luas->id,'nama'=>'> 2000m²','bobot_lokal'=>0.106]);
+        SubKriteria::create(['kriteria_id'=>$luas->id,'nama'=>'< 600m²','bobot_lokal'=>0.557]);
+        SubKriteria::create(['kriteria_id'=>$luas->id,'nama'=>'600 - 2000m²','bobot_lokal'=>0.320]);
+        SubKriteria::create(['kriteria_id'=>$luas->id,'nama'=>'> 2000m²','bobot_lokal'=>0.123]);
 
-        SubKriteria::create(['kriteria_id'=>$peruntukan->id,'nama'=>'Hunian','bobot_lokal'=>0.633]);
-        SubKriteria::create(['kriteria_id'=>$peruntukan->id,'nama'=>'Usaha','bobot_lokal'=>0.260]);
-        SubKriteria::create(['kriteria_id'=>$peruntukan->id,'nama'=>'Pertanian','bobot_lokal'=>0.106]);
+        SubKriteria::create(['kriteria_id'=>$peruntukan->id,'nama'=>'Hunian','bobot_lokal'=>0.669]);
+        SubKriteria::create(['kriteria_id'=>$peruntukan->id,'nama'=>'Usaha','bobot_lokal'=>0.243]);
+        SubKriteria::create(['kriteria_id'=>$peruntukan->id,'nama'=>'Pertanian','bobot_lokal'=>0.088]);
 
         SubKriteria::create(['kriteria_id'=>$lokasi->id,'nama'=>'Perkotaan','bobot_lokal'=>0.750]);
         SubKriteria::create(['kriteria_id'=>$lokasi->id,'nama'=>'Pedesaan','bobot_lokal'=>0.250]);
 
-        SubKriteria::create(['kriteria_id'=>$status->id,'nama'=>'Tanah Negara','bobot_lokal'=>0.243]);
-        SubKriteria::create(['kriteria_id'=>$status->id,'nama'=>'SHM','bobot_lokal'=>0.639]);
-        SubKriteria::create(['kriteria_id'=>$status->id,'nama'=>'HPL','bobot_lokal'=>0.118]);
+        SubKriteria::create(['kriteria_id'=>$status->id,'nama'=>'Tanah Negara','bobot_lokal'=>0.539]);
+        SubKriteria::create(['kriteria_id'=>$status->id,'nama'=>'SHM','bobot_lokal'=>0.297]);
+        SubKriteria::create(['kriteria_id'=>$status->id,'nama'=>'HPL','bobot_lokal'=>0.164]);
 
-        SubKriteria::create(['kriteria_id'=>$jangka->id,'nama'=>'Tetap','bobot_lokal'=>0.548]);
-        SubKriteria::create(['kriteria_id'=>$jangka->id,'nama'=>'< 25 tahun','bobot_lokal'=>0.141]);
-        SubKriteria::create(['kriteria_id'=>$jangka->id,'nama'=>'25 - 50 tahun','bobot_lokal'=>0.236]);
-        SubKriteria::create(['kriteria_id'=>$jangka->id,'nama'=>'> 50 tahun','bobot_lokal'=>0.075]);
+        SubKriteria::create(['kriteria_id'=>$jangka->id,'nama'=>'Tetap','bobot_lokal'=>0.558]);
+        SubKriteria::create(['kriteria_id'=>$jangka->id,'nama'=>'< 25 tahun','bobot_lokal'=>0.057]);
+        SubKriteria::create(['kriteria_id'=>$jangka->id,'nama'=>'25 - 50 tahun','bobot_lokal'=>0.112]);
+        SubKriteria::create(['kriteria_id'=>$jangka->id,'nama'=>'> 50 tahun','bobot_lokal'=>0.263]);
 
         $alternatifs = Alternatif::all();
         $subs = SubKriteria::all();
@@ -110,10 +110,10 @@ class AHPSeeder extends Seeder
 
                 if ($sub->nama == "> 2000m²") {
                     $nilai = match($alt->kode) {
-                     "HM" => 0.245,
-                     "HGB" => 0.543,
-                     "HGU" => 0.076,
-                     "HP" => 0.136,
+                     "HM" => 0.122,
+                     "HGB" => 0.263,
+                     "HGU" => 0.558,
+                     "HP" => 0.057,
                     };
                 }
 
